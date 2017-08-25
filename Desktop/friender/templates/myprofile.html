@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Profile Page</title>
+    <link rel="stylesheet" href="/static/myprofile_style.css"/>
+  </head>
+  <body>
+<section>
+    <div class="topnav" id="myTopnav">
+      <a href="home.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="myprofile.html">My Profile</a>
+      {{ theGreeting }}
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+<!-- </section>     Navigation Bar -->
+<section>
+    <br>
+    <div id="myProfileBody">
+      <div id="topProfileBody">
+        <div id="myProfileUsername">
+          <h2>Welcome back, {{first_name}} {{last_name}}</h2>
+        </div>
+        <div id="profileTopEmpty"></div>
+        <div>
+          <br>
+          <a href="editprofile.html" class="btn">Update Profile</a>
+        </div>
+       </div>
+      <div id="myProfileMain">
+        <div id="namePhoto">
+          <img src={{profileImage}} height="200" width="200">
+          <div id="myProfilePhoto">
+          </div>
+        </div>
+        <div id="aboutQuote">
+          <div id="myProfileAbout">
+            <h1>About Me</h1>
+            <div id="aboutMeInfo">
+              {{ about_you }}
+            </div>
+          </div>
+        </div>
+        <div id="socialMedia">
+          <h1>Social Media</h1>
+          <ul>
+            <li>Phone Number: {{ phone_number }}</li>
+            <li>Instagram: {{ instagram_account }}</li>
+            <li>Snapchat: {{ snapchat_account }}</li>
+            <li>Facebook: {{ facebook_account}}</li>
+          </ul>
+        </div>
+        <div id="hobbies">
+          <h1>Hobbies</h1>
+          <h3>Favorite Hobby: {{ favorite_hobby }}
+          <ul>
+            {% for theHobby in hobbies %}
+            <li>Hobby: {{ theHobby }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+</html>

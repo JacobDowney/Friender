@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="static/search_style.css"/>
+  </head>
+
+  <body>
+  <div class="topnav" id="myTopnav">
+    <a href="home.html">Home</a>
+    <a href="search.html">Search</a>
+    <a href="myprofile.html">My Profile</a>
+    {{ theGreeting }}
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+    <br><br>
+
+    <div id="searchBar">
+      <form method="post" action="">
+        <h1>Activity: </h1><input id="theSearchText" type="text" name="yourSearch" placeholder="Enter Activity">
+        <br><br><br><input id="theSearchSubmit" type="submit" value="Submit" class="button">
+      </form>
+    </div>
+
+
+
+  </body>
+</html>

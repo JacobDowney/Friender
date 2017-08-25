@@ -1,0 +1,67 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Profile Page</title>
+    <link rel="stylesheet" href="/static/editprofile_style.css"/>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="home.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="myprofile.html">My Profile</a>
+      {{ greeting }}
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <br><br>
+
+<div id="UpdateProfileStyles">
+    <h2>Update Your Profile:</h2>
+    <form method="post" action="">
+      <h3> First Name: <input type="text" name="first_name" value="{{user_obj['first_name']}}"> </h3>
+      <h3> Last Name: <input type="text" name="last_name" value="{{user_obj['last_name']}}"></h3>
+      <h3> About you: <input type="text" name="about_you" value="{{user_obj['about_you']}}"></h3>
+      <h3> Favorite Hobby: <input type="text" name="favorite_hobby" value="{{user_obj['favorite_hobby']}}"></h3>
+      <h2> Social Media: </h2>
+      <h3> Instagram: <input type="text" name="instagram_account" value="{{user_obj['instagram_account']}}"></h3>
+      <h3> Facebook: <input type="text" name="facebook_account" value="{{user_obj['facebook_account']}}"></h3>
+      <h3> Snapchat: <input type="text" name="snapchat_account" value="{{user_obj['snapchat_account']}}"></h3>
+      <h3> Phone Number: <input type="text" name="phone_number" value="{{user_obj['phone_number']}}"></h3>
+
+      <input type="checkbox" name="hobbyArt" value="Art">Art<br>
+      <input type="checkbox" name="hobbyBaseball" value="Baseball">Baseball<br>
+      <input type="checkbox" name="hobbyBasketball" value="Basketball">Basketball<br>
+      <input type="checkbox" name="hobbyBiking" value="Biking">Biking<br>
+      <input type="checkbox" name="hobbyBowling" value="Bowling">Bowling<br>
+      <input type="checkbox" name="hobbyChess" value="Chess">Chess<br>
+      <input type="checkbox" name="hobbyEating" value="Eating">Eating<br>
+      <input type="checkbox" name="hobbyFishing" value="Fishing">Fishing<br>
+      <input type="checkbox" name="hobbyFootball" value="Football">Football<br>
+      <input type="checkbox" name="hobbyGolf" value="Golf">Golf<br>
+      <input type="checkbox" name="hobbyGoKartRacing" value="Go Kart Racing">Go Kart Racing<br>
+      <input type="checkbox" name="hobbyHiking" value="Hiking">Hiking<br>
+      <input type="checkbox" name="hobbyMountainBiking" value="Mountain Biking">Mountain Biking<br>
+      <input type="checkbox" name="hobbyPhotography" value="Photography">Photography<br>
+      <input type="checkbox" name="hobbyRacingPigeons" value="Racing Pigeons">Racing Pigeons<br>
+      <input type="checkbox" name="hobbyRockClimbing" value="Rock Climbing">Rock Climbing<br>
+      <input type="checkbox" name="hobbyShopping" value="Shopping">Shopping<br>
+      <input type="checkbox" name="hobbySkateboarding" value="Skateboarding">Skateboarding<br>
+      <input type="checkbox" name="hobbySnowboarding" value="Snowboarding">Snowboarding<br>
+      <input type="checkbox" name="hobbySoccer" value="Soccer">Soccer<br>
+      <input type="checkbox" name="hobbySurfing" value="Surfing">Surfing<br>
+      <input type="checkbox" name="hobbyTennis" value="Tennis">Tennis<br>
+      <input type="checkbox" name="hobbyVideoGames" value="Video Games">Video Games<br>
+      <input type="checkbox" name="hobbyVolleyball" value="Volleyball">Volleyball<br>
+      <input type="checkbox" name="hobbyYoga" value="Yoga">Yoga<br>
+      <p>
+        <input type = "submit" value= "Submit" />
+      </p>
+    </form>
+</div>
+
+<br> <br> <br>
+
+  </body>
+
+</html>

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>After Search</title>
+    <link rel="stylesheet" href="static/aftersearch_style.css"/>
+  </head>
+
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="home.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="myprofile.html">My Profile</a>
+      {{ theGreeting }}
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <div id = "profile_match_wrapper">
+    <ul id="annoyingli">
+      {% for user in theUsers %}
+        <li>
+
+          <div id="myProfileBody">
+            <div id="myProfileMain">
+              <div id="other">
+                <div id="myProfileUsername">
+                  <h2>{{user.first_name}} {{user.last_name}}</h2>
+                </div>
+                <div id="namePhoto">
+                  <div id="myProfilePhoto">
+                    <img src={{profileImages[loop.index0]}} height="200" width="200">
+                  </div>
+                </div>
+              </div>
+              <div id="aboutQuote">
+                <div id="myProfileAbout">
+                  <h1>About Me</h1>
+                  <div id="aboutMeInfo">
+                    {{ user.about_you }}
+                  </div>
+                </div>
+              </div>
+              <div id="socialMedia">
+                <h1>Social Media</h1>
+                <ul>
+                  <li>Phone Number: {{ user.phone_number }}</li>
+                  <li>Instagram: {{ user.instagram_account }}</li>
+                  <li>Snapchat: {{ user.snapchat_account }}</li>
+                  <li>Facebook: {{ user.facebook_account}}</li>
+                </ul>
+              </div>
+              <div id="hobbies">
+                <h1>Hobbies</h1>
+                <h3>Favorite Hobby: {{ user.favorite_hobby }}
+                <ul>
+                  {% for theHobby in user.hobbies %}
+                  <li>Hobby: {{ theHobby }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+      {% endfor %}
+    </ul>
+    </div>
+
+  </body>
+
+</html>
